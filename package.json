@@ -1,0 +1,15 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Smart Cube task",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Mahmoud Lotfy",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.3"
+  }
+}
