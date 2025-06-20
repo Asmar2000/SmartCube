@@ -17,21 +17,9 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Print Node and Playwright versions
-      run: |
-        node --version
-        npx playwright --version
-    - name: List Playwright test files
-      run: |
-        npx playwright test --list
-    - name: Start web server
-      run: npm run start & npx wait-on http://localhost:3000
     - name: Run Playwright tests
-      env:
-        DEBUG: pw:browser*
-      run: npx playwright test --timeout=60000 --reporter=list
-    - name: Upload Playwright report
-      uses: actions/upload-artifact@v4
+      run: npx playwright test
+    - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
         name: playwright-report
